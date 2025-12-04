@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-groq" %}
-{% set version = "0.47.2" %}
+{% set version = "0.49.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
-  sha256: bf5a3230c3ed3d4118e07caa88f3570c443664ef19f1241ad7d88775f39cfad9
+  sha256: 5f4f8a0a387b64ddf9a3e61aa85d821c03899fd3651f1610d6534dc3672e3b0a
 
 build:
   number: 0
@@ -21,9 +21,9 @@ requirements:
     - poetry-core
   run:
     - python
-    - opentelemetry-api >=1.28.0,<2.0.0
-    - opentelemetry-instrumentation >=0.50b0
-    - opentelemetry-semantic-conventions >=0.50b0
+    - opentelemetry-api >=1.38.0,<2.0.0
+    - opentelemetry-instrumentation >=0.59b0
+    - opentelemetry-semantic-conventions >=0.59b0
     - opentelemetry-semantic-conventions-ai >=0.4.13,<0.5
   run_constrained:
     - groq >=0.18.0
