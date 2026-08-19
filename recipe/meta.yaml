@@ -1,13 +1,13 @@
 {% set name = "opentelemetry-instrumentation-groq" %}
-{% set version = "0.57.0" %}
+{% set version = "0.62.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
-  sha256: 3ea0171c4f59d794ceafae4c912afe09cad6ba474e0eec74225a8ee6501c8d17
+  sha256: 6aa6162786e3a0195814de48e349eedcd81673860dd33efe3cb96d203a02574d
 
 build:
   number: 0
@@ -23,10 +23,10 @@ requirements:
     - python
     - opentelemetry-api >=1.38.0,<2.0.0
     - opentelemetry-instrumentation >=0.59b0
-    - opentelemetry-semantic-conventions >=0.59b0
     - opentelemetry-semantic-conventions-ai >=0.5.1,<0.6.0
+    - opentelemetry-semantic-conventions >=0.63b1
   run_constrained:
-    - groq >=0.18.0
+    - groq >=1.2.0
 
 # Unable to run tests and check imports, groq is not in the main channel.
 test:
